@@ -15,6 +15,7 @@
  
 - hosts: webserver
   become: true
+  strategy: free
   tasks:
       
   - name: copy local_index.html to web server
