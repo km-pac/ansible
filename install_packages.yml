@@ -10,4 +10,4 @@
         - tcpdump
         - net-tools
         - wget
-      status: present
+      state: present
