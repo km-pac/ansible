@@ -11,3 +11,11 @@
         - net-tools
         - wget
       state: present
+      
+  - name: copy local_index.html to web server
+    copy:
+      src: local_index.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644
