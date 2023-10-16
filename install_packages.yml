@@ -6,11 +6,16 @@
   - name: install packages
     yum:
       name:
-        - tracerote
+        - traceroute
         - tcpdump
         - net-tools
         - wget
       state: present
+
+ 
+- hosts: webserver
+  become: true
+  tasks:
       
   - name: copy local_index.html to web server
     copy:
