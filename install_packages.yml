@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  
+  - name: check if packages installed
+    yum:
+      name: "{{ packages }}"
+    vars:
+      packages:
+        - traceroute
+        - tcpdump
+        - net-tools
+        - wget
+
+  - name: install packages
+    yum:
+      name:
+        - tracerote
+        - tcpdump
+        - net-tools
+        - wget
